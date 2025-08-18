@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+    <h2> Q1 2nd Graded Exercise submitted by Enzo Hernandez of 9-Magnesium</h2>
+     <label> Meal Price:
+        <input id="price" />
+     </label></br/>
+
+     <label> Tip:
+        <input id="tip" />
+     </label></br/>
+
+     <label> Service Charge:
+        <input id="service" />
+     </label></br/>
+
+
+     <button onclick="totalMeal()"> Accept Input</button> </p>
+     <p> Total Meal : <span id="Meal"></span></p>    
+
+    <script>
+        function totalMeal() {
+               let dprice = document.getElementById("price").value;
+               let dtip = document.getElementById("tip").value;
+               let dservice = document.getElementById("service").value;
+               let dmeal = Number(dprice) + Number(dtip) + (Number(dservice)/100 * Number(dprice))
+               let emeal = dmeal.toFixed(2)
+               document.getElementById("Meal").innerHTML = emeal;         
+        }
+    </script>
+
+</body>
+</html>
